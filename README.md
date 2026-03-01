@@ -32,7 +32,10 @@ type `python3 Jardim_de_Cinzas.py`
 download the folder **"Jardim de Cinzas"** and **Python3** in [Official Site of Python](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
 **right click it**  
-**Done!**
+**Done!**  
+
+Author: Allan Oliveira Duarte Leal
+Contact: eudeveloper143@gmail.com
 
 # Meu primeiro projeto de jogo em Python
 
@@ -66,4 +69,7 @@ digite `python3 Jardim_de_Cinzas.py`
 Baixe a pasta **"Jardim de Cinzas"** e **Python3** em [Site Oficial do Python](https://www.python.org/)  
 encontre **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
-**Feito!**
+**Feito!**  
+
+Autor: Allan Oliveira Duarte Leal
+Contato: eudeveloper143@gmail.com
