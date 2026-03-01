@@ -29,7 +29,7 @@ download the folder "jogos"
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-download the folder **"jogos"** and **Python3** in [Official Site of Python](https://www.python3.org/)  
+download the folder **"jogos"** and **Python3** in [Official Site of Python](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
 **right click it**  
 **Done!**
@@ -55,5 +55,15 @@ quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções 
 
 **Jardim de Cinzas** é um jogo de terror psicológico melancólico sobre perda e memória. O jogo segue a história de um garoto vivendo uma rotina monótona: Ir pra escola, levar sua irmã **Isa** para curso de música, e cozinhar. *Porém*, atrás da aparente normalidade, uma criatura estranha espreita, esperando para mudar o rumo da vida dele para ***sempre.***
 
-## Como instalo o Jardim de Cinzas?  
-É simples! Basta ter **Python3** instalado (você pode achar no site oficial), colocar a pasta "jogos" na pasta C: ou home/ e, no **PowerShell/Terminal Linux**, *executar* `python3 Jardim_de_Cinzas.py`. *Se o Windows perguntar se é pra executar como administrador ou algo assim, permita. Não se preocupe, 0 vírus.*
+## Como instalar?
+### Linux:  
+baixe a pasta "jogos"  
+**clique com o botão direito na pasta**  
+**"Abrir com o terminal"**  
+digite `python3 Jardim_de_Cinzas.py`  
+**Feito!**  
+### Windows:  
+Baixe a pasta **"jogos"** e **Python3** em [Site Oficial do Python](https://www.python.org/)  
+encontre **"Jardim_de_Cinzas.py"**  
+**clique duas vezes no arquivo**  
+**Feito!**
