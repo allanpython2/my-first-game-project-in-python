@@ -3,6 +3,7 @@
 ## Note to English readers:  
 Before we begin, I'd like to mention that English is not my native language. Please feel free to correct me if you find any mistakes! And the game is currently in Portuguese, but I am working hard on the English translation all by myself. Thanks for your patience! <br>
 ***Indie developer: this project isn't finished yet. If you want to have the full experience, please wait!***  
+***If someone wants to give some idea or report a bug, contact this handsome guy: eudeveloper@gmail.com***  
 ***100% human. don't let AI steal our jobs, you fools!***
 
 
@@ -12,10 +13,31 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 
   this game contains:
   * psychological trauma
-  * themes of loss and psychological trauma
+  * themes of loss
   * Depictions of grief
     
     Remember: you are not alone on this. We love *you*.
 </details>  
 
-**Garden of Ashes** is a melancholic psychological horror game about loss and memory. Originally released in Brazilian Portuguese as "*Jardim de Cinzas*", the game follows a boy living a mundane routine: going to school, taking his sister **Isa** to music lessons, and cooking. However, behind this apparent normalcy, a strange creature lurks, waiting to change the course of his life ***forever.***
+**Garden of Ashes** is a melancholic psychological horror game about loss and memory. Originally released in Brazilian Portuguese as "*Jardim de Cinzas*", the game follows a boy living a mundane routine: going to school, taking his sister **Isa** to music lessons, and cooking. However, behind this apparent normalcy, a strange creature lurks, waiting to change the course of his life ***forever.***  
+
+# Meu primeiro projeto de jogo em Python
+
+## Nota para os Brasileiros ou portugueses:  
+Felizmente, **Jardim de Cinzas é um jogo 100% em PT-BR!!** Mas, como nem tudo são flores, o jogo ***não está 100% completo*** é recomendado esperar se você quiser a experiência completa!  
+quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções de bugs** *pode falar com esse cara lindo:* eudeveloper143@gmail.com  
+***100% humano. Não deixem IA roubar nosso trabalho, seus idiotas!***  
+
+**Alerta de Gatilho** (*caso você não seja fraco de coração ou quer evitar spoilers, pule essa seção.*)
+<details>
+  <summary><b>Clique aqui se você for sensível a temas pesados</b></summary>  
+
+  esse jogo contém:
+  * trauma psicológico
+  * temas de perda
+  * Representações de luto
+
+    Lembre-se: Você não está sozinho nessa. Nós amamos *você*.
+</details>
+
+**Jardim de Cinzas** é um jogo de terror psicológico melancólico sobre perda e memória. O jogo segue a história de um garoto vivendo uma rotina monótona: Ir pra escola, levar sua irmã **Isa** para curso de música, e cozinhar. *Porém*, atrás da aparente normalidade, uma criatura estranha espreita, esperando para mudar o rumo da vida dele para ***sempre.***
