@@ -29,7 +29,7 @@ download the folder "jogos"
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-download the folder **"jogos"** and **Python3** in [Official Site of Python](https://www.python3.org)  
+download the folder **"jogos"** and **Python3** in [Official Site of Python](https://www.python3.org/)  
 find **"Jardim_de_Cinzas.py"**  
 **right click it**  
 **Done!**
