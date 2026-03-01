@@ -31,7 +31,7 @@ type `python3 Jardim_de_Cinzas.py`
 ### Windows:  
 download the folder **"Jardim de Cinzas"** and **Python3** in [Official Site of Python](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
-**right click it**  
+**double click it**  
 **Done!**  
   
 ***Warning: Unfortunately, the game doesn't work on emulators like Pydroid3.***  
