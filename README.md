@@ -3,7 +3,7 @@
 ## Note to English readers:  
 Before we begin, I'd like to mention that English is not my native language. Please feel free to correct me if you find any mistakes! And the game is currently in Portuguese, but I am working hard on the English translation all by myself. Thanks for your patience! <br>
 ***Indie developer: this project isn't finished yet. If you want to have the full experience, please wait!***  
-***If someone wants to give some idea to the game or report a bug, contact this handsome guy: eudeveloper143@gmail.com***  
+***If someone wants to suggest idea to the game or report a bug, contact this handsome guy: eudeveloper143@gmail.com***  
 ***100% human. don't let AI steal our jobs, you fools!***
 
 
@@ -29,7 +29,7 @@ download the folder **"Jardim de Cinzas"**
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-download the folder **"Jardim de Cinzas"** and **Python3** in [Official Site of Python](https://www.python.org/)  
+download the folder **"Jardim de Cinzas"** and install **Python3** from the [Official Python Website](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
 **double click it**  
 **Done!**  
@@ -43,7 +43,7 @@ Contact: eudeveloper143@gmail.com
 
 ## Nota para os Brasileiros ou portugueses:  
 Felizmente, **Jardim de Cinzas é um jogo 100% em PT-BR!!** Mas, como nem tudo são flores, o jogo ***não está 100% completo***: é recomendado esperar se você quiser a experiência completa!  
-quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções de bugs** *pode falar com esse cara lindo:* eudeveloper143@gmail.com  
+Quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções de bugs** *pode falar com esse cara lindo:* eudeveloper143@gmail.com  
 ***100% humano. Não deixem IA roubar nosso trabalho, seus idiotas!***  
 
 **Alerta de Gatilho** (*caso você não seja fraco de coração ou quer evitar spoilers, pule essa seção.*)
