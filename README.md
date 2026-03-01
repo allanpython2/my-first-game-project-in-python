@@ -37,7 +37,7 @@ find **"Jardim_de_Cinzas.py"**
 # Meu primeiro projeto de jogo em Python
 
 ## Nota para os Brasileiros ou portugueses:  
-Felizmente, **Jardim de Cinzas é um jogo 100% em PT-BR!!** Mas, como nem tudo são flores, o jogo ***não está 100% completo*** é recomendado esperar se você quiser a experiência completa!  
+Felizmente, **Jardim de Cinzas é um jogo 100% em PT-BR!!** Mas, como nem tudo são flores, o jogo ***não está 100% completo***: é recomendado esperar se você quiser a experiência completa!  
 quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções de bugs** *pode falar com esse cara lindo:* eudeveloper143@gmail.com  
 ***100% humano. Não deixem IA roubar nosso trabalho, seus idiotas!***  
 
