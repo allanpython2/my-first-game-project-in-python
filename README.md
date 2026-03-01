@@ -23,13 +23,13 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 
 ## How to install?
 ### Linux:  
-download the folder "jogos"  
+download the folder **"Jardim de Cinzas"**  
 **right click it**  
 **"open with terminal"**  
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-download the folder **"jogos"** and **Python3** in [Official Site of Python](https://www.python.org/)  
+download the folder **"Jardim de Cinzas"** and **Python3** in [Official Site of Python](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
 **right click it**  
 **Done!**
@@ -57,13 +57,13 @@ quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções 
 
 ## Como instalar?
 ### Linux:  
-baixe a pasta "jogos"  
+baixe a pasta **"Jardim de Cinzas"**  
 **clique com o botão direito na pasta**  
 **"Abrir com o terminal"**  
 digite `python3 Jardim_de_Cinzas.py`  
 **Feito!**  
 ### Windows:  
-Baixe a pasta **"jogos"** e **Python3** em [Site Oficial do Python](https://www.python.org/)  
+Baixe a pasta **"Jardim de Cinzas"** e **Python3** em [Site Oficial do Python](https://www.python.org/)  
 encontre **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
 **Feito!**
