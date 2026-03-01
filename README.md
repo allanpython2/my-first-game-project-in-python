@@ -33,6 +33,7 @@ download the folder **"Jardim de Cinzas"** and **Python3** in [Official Site of 
 find **"Jardim_de_Cinzas.py"**  
 **right click it**  
 **Done!**  
+***Warning: Unfortunately, the game doesn't work on emulators like Pydroid3.***  
 
 Author: Allan Oliveira Duarte Leal  
 Contact: eudeveloper143@gmail.com
@@ -70,6 +71,8 @@ Baixe a pasta **"Jardim de Cinzas"** e **Python3** em [Site Oficial do Python](h
 encontre **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
 **Feito!**  
+
+Aviso: Infelizmente, o jogo não roda em emuladores como Pydroid3.
 
 Autor: Allan Oliveira Duarte Leal  
 Contato: eudeveloper143@gmail.com
