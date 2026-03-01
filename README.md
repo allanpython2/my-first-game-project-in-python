@@ -22,9 +22,17 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 **Garden of Ashes** is a melancholic psychological horror game about loss and memory. Originally released in Brazilian Portuguese as "*Jardim de Cinzas*", the game follows a boy living a mundane routine: going to school, taking his sister **Isa** to music lessons, and cooking. However, behind this apparent normalcy, a strange creature lurks, waiting to change the course of his life ***forever.***  
 
 ## How to install?
-It's simple. Just have **Python3** installed (you can find that in the official site), **put the folder "jogos" in C: or home/**, and, in **PowerShell/Terminal Linux**, *execute* `python3 Jardim_de_Cinzas.py`
-### Why put this in C: or home/ ?  
-It's because ***the system will search the file to execute in the first directory. To don't have a long path of folders and subfolders, I prefer to put this here.*** *if Windows question to execute as admin or something, allow. Don't worry, 0 viruses.* 
+### Linux:  
+download the folder "jogos"  
+**right click it**  
+**"open with terminal"**  
+type `python3 Jardim_de_Cinzas.py`  
+**Done!**  
+### Windows:  
+download the folder **"jogos"** and **Python3** in [Official Site of Python](python3.org)  
+find **"Jardim_de_Cinzas.py"**  
+**right click it**  
+**Done!**
 
 # Meu primeiro projeto de jogo em Python
 
