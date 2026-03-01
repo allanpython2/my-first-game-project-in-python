@@ -71,5 +71,5 @@ encontre **"Jardim_de_Cinzas.py"**
 **clique duas vezes no arquivo**  
 **Feito!**  
 
-Autor: Allan Oliveira Duarte Leal
+Autor: Allan Oliveira Duarte Leal  
 Contato: eudeveloper143@gmail.com
