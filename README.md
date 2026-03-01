@@ -3,7 +3,7 @@
 ## Note to English readers:  
 Before we begin, I'd like to mention that English is not my native language. Please feel free to correct me if you find any mistakes! And the game is currently in Portuguese, but I am working hard on the English translation all by myself. Thanks for your patience! <br>
 ***Indie developer: this project isn't finished yet. If you want to have the full experience, please wait!***  
-***If someone wants to give some idea or report a bug, contact this handsome guy: eudeveloper143@gmail.com***  
+***If someone wants to give some idea to the game or report a bug, contact this handsome guy: eudeveloper143@gmail.com***  
 ***100% human. don't let AI steal our jobs, you fools!***
 
 
