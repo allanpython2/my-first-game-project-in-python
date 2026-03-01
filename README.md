@@ -21,6 +21,9 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 
 **Garden of Ashes** is a melancholic psychological horror game about loss and memory. Originally released in Brazilian Portuguese as "*Jardim de Cinzas*", the game follows a boy living a mundane routine: going to school, taking his sister **Isa** to music lessons, and cooking. However, behind this apparent normalcy, a strange creature lurks, waiting to change the course of his life ***forever.***  
 
+## How to install?
+It's simple. Just have **Python3** installed (you can find that in the official site) and, in **PowerShell/Terminal Linux**, *execute* `python3 Jardim_de_Cinzas.py`
+
 # Meu primeiro projeto de jogo em Python
 
 ## Nota para os Brasileiros ou portugueses:  
@@ -41,3 +44,6 @@ quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções 
 </details>
 
 **Jardim de Cinzas** é um jogo de terror psicológico melancólico sobre perda e memória. O jogo segue a história de um garoto vivendo uma rotina monótona: Ir pra escola, levar sua irmã **Isa** para curso de música, e cozinhar. *Porém*, atrás da aparente normalidade, uma criatura estranha espreita, esperando para mudar o rumo da vida dele para ***sempre.***
+
+## Como instalo o Jardim de Cinzas?  
+É simples! Basta ter **Python3** instalado (você pode achar no site oficial) e, no **PowerShell/Terminal Linux**, *executar* `python3 Jardim_de_Cinzas.py`
