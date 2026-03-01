@@ -22,7 +22,9 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 **Garden of Ashes** is a melancholic psychological horror game about loss and memory. Originally released in Brazilian Portuguese as "*Jardim de Cinzas*", the game follows a boy living a mundane routine: going to school, taking his sister **Isa** to music lessons, and cooking. However, behind this apparent normalcy, a strange creature lurks, waiting to change the course of his life ***forever.***  
 
 ## How to install?
-It's simple. Just have **Python3** installed (you can find that in the official site) and, in **PowerShell/Terminal Linux**, *execute* `python3 Jardim_de_Cinzas.py`
+It's simple. Just have **Python3** installed (you can find that in the official site), **put the folder "jogos" in C: or home/**, and, in **PowerShell/Terminal Linux**, *execute* `python3 Jardim_de_Cinzas.py`
+### Why put this in C: or home/ ?  
+It's because ***the system will search the file to execute in the first directory. To don't have a long path of folders and subfolders, I prefer to put this here.*** *if Windows question to execute as admin or something, allow. Don't worry, 0 viruses.* 
 
 # Meu primeiro projeto de jogo em Python
 
@@ -46,4 +48,4 @@ quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções 
 **Jardim de Cinzas** é um jogo de terror psicológico melancólico sobre perda e memória. O jogo segue a história de um garoto vivendo uma rotina monótona: Ir pra escola, levar sua irmã **Isa** para curso de música, e cozinhar. *Porém*, atrás da aparente normalidade, uma criatura estranha espreita, esperando para mudar o rumo da vida dele para ***sempre.***
 
 ## Como instalo o Jardim de Cinzas?  
-É simples! Basta ter **Python3** instalado (você pode achar no site oficial) e, no **PowerShell/Terminal Linux**, *executar* `python3 Jardim_de_Cinzas.py`
+É simples! Basta ter **Python3** instalado (você pode achar no site oficial), colocar a pasta "jogos" na pasta C: ou home/ e, no **PowerShell/Terminal Linux**, *executar* `python3 Jardim_de_Cinzas.py`. *Se o Windows perguntar se é pra executar como administrador ou algo assim, permita. Não se preocupe, 0 vírus.*
