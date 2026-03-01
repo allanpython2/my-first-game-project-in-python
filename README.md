@@ -34,7 +34,7 @@ find **"Jardim_de_Cinzas.py"**
 **right click it**  
 **Done!**  
 
-Author: Allan Oliveira Duarte Leal
+Author: Allan Oliveira Duarte Leal  
 Contact: eudeveloper143@gmail.com
 
 # Meu primeiro projeto de jogo em Python
