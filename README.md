@@ -23,7 +23,9 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 
 ## How to install?
 ### Linux:  
-download the folder **"Jardim de Cinzas"**  
+**download the repository as zip**
+**Extract it**
+open the folder **"Jardim de Cinzas"**  
 **right click it**  
 **"open with terminal"**  
 type `python3 Jardim_de_Cinzas.py`  
@@ -31,11 +33,18 @@ type `python3 Jardim_de_Cinzas.py`
 ### Windows:  
 download the folder **"Jardim de Cinzas"** and install **Python3** from the [Official Python Website](https://www.python.org/)  
 find **"Jardim_de_Cinzas.py"**  
-**double click it**  
+**double-click it**  
 **Done!**  
   
 ***Warning: Unfortunately, the game doesn't work on emulators like Pydroid3.***  
 
+  ## Features:  
+  * Fixed several bugs
+  * Improved the player status system
+  * Added colored output to print()
+  * Isa no longer dies randomly
+
+      
 Author: Allan Oliveira Duarte Leal  
 Contact: eudeveloper143@gmail.com
 
@@ -68,12 +77,17 @@ baixe a pasta **"Jardim de Cinzas"**
 digite `python3 Jardim_de_Cinzas.py`  
 **Feito!**  
 ### Windows:  
-Baixe a pasta **"Jardim de Cinzas"** e **Python3** em [Site Oficial do Python](https://www.python.org/)  
+Baixe a pasta **"Jardim de Cinzas"** e **Python3** no [site oficial do Python](https://www.python.org/)  
 encontre **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
 **Feito!**  
   
-***Aviso: Infelizmente, o jogo não roda em emuladores como Pydroid3.***
+***Aviso: Infelizmente, o jogo não roda em emuladores como Pydroid3.***  
+
+  ## Atualizações:
+  * Consertei diversos bugs
+  * Melhorei o sistema de jogador_status
+  * Agora a Isa não morre mais aleatoriamente.  
 
 Autor: Allan Oliveira Duarte Leal  
 Contato: eudeveloper143@gmail.com
