@@ -31,7 +31,9 @@ open the folder **"Jardim de Cinzas"**
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-download the folder **"Jardim de Cinzas"** and install **Python3** from the [Official Python Website](https://www.python.org/)  
+make sure you have installed **Python3** from the [official python website](https://www.python.org/)
+download the repository as zip  
+extract it    
 find **"Jardim_de_Cinzas.py"**  
 **double-click it**  
 **Done!**  
@@ -42,7 +44,7 @@ find **"Jardim_de_Cinzas.py"**
   * Fixed several bugs  
   * Improved the player status system  
   * Added colored output to print()  
-  * Isa no longer dies randomly  
+  * Isa no longer dies randomly.  
   * "Prologue: The Boy's Nightmare" has been released in Brazilian Portuguese.
   * chapter 1 soon!  
   
@@ -73,14 +75,18 @@ Quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções 
 
 ## Como instalar?
 ### Linux:  
-baixe a pasta **"Jardim de Cinzas"**  
+baixe o repositório como **zip**;  
+**extraia o repoistório**;  
+ache a pasta **"Jardim de Cinzas"**  
 **clique com o botão direito na pasta**  
 **"Abrir com o terminal"**  
 digite `python3 Jardim_de_Cinzas.py`  
 **Feito!**  
 ### Windows:  
-Baixe a pasta **"Jardim de Cinzas"** e **Python3** no [site oficial do Python](https://www.python.org/)  
-encontre **"Jardim_de_Cinzas.py"**  
+tenha certeza que você tem o Python instalado pelo [site oficial do Python](https://www.python.org/)  
+Baixe o repositório como **zip**;
+**extraia o repositório**
+ache a pasta **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
 **Feito!**  
   
