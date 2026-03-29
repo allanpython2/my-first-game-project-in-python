@@ -219,7 +219,8 @@ def capitulo3():
     jogador_status['capitulo'] = "3"
     salvar_jogo()
     typewriter("Jardim de Cinzas. Capítulo 1: Negação")
-
+    print("[bold]em breve!![/bold]")
+    menu_inicial()
 # iniciar novo jogo
 
 def iniciar_novo_jogo():
@@ -242,7 +243,7 @@ def menu_inicial():
         print("MENU PRINCIPAL")
         print("-=--==-=--==-=--==-\n1 - Iniciar Jogo\n2 - Continuar Jogo\n3 - Créditos\n4 - Sair")
         time.sleep(1)
-        menu = input("Digite um dos números acima:\nApoie meu github -->>").strip()
+        menu = input("Digite um dos números acima:\nApoie meu github -->>https://github.com/allanpython2/my-first-game-project-in-python").strip()
         if menu == '1':
             iniciar_novo_jogo()
         elif menu == '2':
@@ -251,6 +252,8 @@ def menu_inicial():
                     Preludio()
                 elif jogador_status['capitulo'] == 2:
                     capitulo2()
+                elif jogador_status['capitulo'] == 3:
+                    capitulo3()
                 else:
                     input("pressione qualquer coisa para voltar ao menu...")
                     limpar_tela()
