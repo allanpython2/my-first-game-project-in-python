@@ -31,7 +31,7 @@ open the folder **"Jardim de Cinzas"**
 type `python3 Jardim_de_Cinzas.py`  
 **Done!**  
 ### Windows:  
-make sure you have installed **Python3** from the [official python website](https://www.python.org/)
+make sure you have installed **Python3** from the [official python website](https://www.python.org/)  
 download the repository as zip  
 extract it    
 find **"Jardim_de_Cinzas.py"**  
@@ -84,8 +84,8 @@ digite `python3 Jardim_de_Cinzas.py`
 **Feito!**  
 ### Windows:  
 tenha certeza que você tem o Python instalado pelo [site oficial do Python](https://www.python.org/)  
-Baixe o repositório como **zip**;
-**extraia o repositório**
+Baixe o repositório como **zip**;  
+**extraia o repositório**  
 ache a pasta **"Jardim_de_Cinzas.py"**  
 **clique duas vezes no arquivo**  
 **Feito!**  
