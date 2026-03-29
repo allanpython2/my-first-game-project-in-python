@@ -4,7 +4,20 @@ import sys
 import os
 import random
 import json
-        
+from rich import print
+
+jogador_status = None
+
+def criar_novo_jogo(nome):
+    return {
+        "nome": nome,
+        "vida": 35,
+        "vida_max": 35,
+        "ataque": 10,
+        "inventario": [],
+        "capitulo": 1,
+        "tutorial_concluido": False
+    }
 # frases pra se o jogador escolher sair do menu
 frases = ["Dando o fora...", "Saindo...", "Não vou perder meu tempo nesse jogo..."]
 # game over
@@ -36,70 +49,214 @@ if fun == 1:
 # limpar a tela
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-# carregando coisas nada a ver so pra ficar bonito
-for c in range(1, 101):
-    print(f"Carregando falas... {c}%")
-    time.sleep(0.08)
-print("Carregou falas com sucesso de 100%!")
-time.sleep(0.5)
-
-for c in range(1, 101):
-    print(f"carregando status do jogador... {c}%")
-    time.sleep(0.08)
-print("carregou status do jogador com sucesso de 100%!")
-print("Tudo pronto, chamando o resto das funções do jogo...")
-time.sleep(0.5)
-print("Olá, Mundo!")
-time.sleep(0.3)
-limpar_tela()
 # carregar jogo no menu em json (eu ODEIO MUITO json)
 def carregar_jogo():
-    global jogador_status
-    try:
-        with open("save.json", "r") as arquivo:
-            jogador_status = json.load(arquivo)
-        print("[=] Ainda há esperança! Save carregado com sucesso.")
-        time.sleep(0.5)
-    except FileNotFoundError:
-        print("[!] Mas ninguém veio. Nenhum save encontrado.")
-        
+    while True:
+        global jogador_status
+        try:
+            with open("save.json", "r") as arquivo:
+                jogador_status = json.load(arquivo)
+            print("[bold green][=] Ainda há esperança! Save carregado com sucesso.[/]")
+            time.sleep(0.9)
+            return True
+            time.sleep(0.5)
+        except FileNotFoundError:
+            print("[italic red][!] Mas ninguém veio. Nenhum save encontrado.[/]")
+            return False
+# save data em json (eu ODEIO json)
+def salvar_jogo():
+    with open("save.json", "w") as arquivo:
+        json.dump(jogador_status, arquivo, indent=4)
+    print("[bold yellow][+] Jogo salvo automaticamente.[/]")
+    time.sleep(0.5)
+# primeira parte da história:
+def Preludio():
+    limpar_tela()
+    typewriter("Jardim de Cinzas.\nCapítulo 1: Tutorial.")
+    typewriter(f"[???] {jogador_status['nome']}, acorda!! você vai se atrasar pra escola!!!")
+    typewriter("...")
+    time.sleep(1)
+    typewriter("Quem será que é agora?")
+    time.sleep(1)
+    typewriter("devagarzinho, você levanta as pálpebras e vê quem é...")
+    print("É A SUA MÃE!!!")
+    time.sleep(0.4)
+    typewriter("[MÃE MUITO IRRITADA] TÁ ESPERANDO O QUÊ? LEVANTA DA CAMA E VAI SE ARRUMAR!")
+    time.sleep(0.4)
+    typewriter("Você olha o calendário escolar.")
+    typewriter("Hoje é domingo.")
+    time.sleep(0.4)
+    typewriter("Antes que você pudesse dizer algo ou fechar a porta, alguém chega no corredor e interrompe sua mãe...")
+    time.sleep(1)
+    print("É sua irmã, Isa!")
+    time.sleep(1)
+    typewriter(f"[Isa] Mãe, hoje não tem aula, é DOMINGO, SETE HORAS DA MANHÃ!! Deixa o {jogador_status['nome']} dormir e depois desce pra tomar café.")
+    time.sleep(1)
+    typewriter("[Isa] Na verdade, EU estou atrasada, pro curso musical que VOCÊ tinha que me levar, lembra?")
+    time.sleep(2)
+    print("Bate um silêncio ensurdecedor no quarto. Sua mãe procura as palavras, mas nada saiu da boca dela.")
+    time.sleep(2)
+    typewriter(f"[Mãe] Na verdade, por que não deixamos o {jogador_status['nome']} decidir se ele quer dormir ou te levar, hein?")
+# interação do jogador
+
+    print("\nO que você quer?")
+    acao_jogador = input("\n[1] Dormir\n[2] Ir com a Isa")
+    if acao_jogador == "1":
+        typewriter(f"\n[Isa] Poxa, {jogador_status['nome']}, vamos logo!")
+        time.sleep(1)
+        typewriter(f"{jogador_status['nome']}...Tá.")
+        typewriter("Sem opções, você se arruma e sai de casa com ela.")
+        return Tutorial()
+    elif acao_jogador == "2":
+        typewriter("[Isa] Obaa, Vamos logo!")
+        return Tutorial()
+    else:
+        print("\n[!] Erro! Digite apenas um dos números listados!")
+        return "erro"
+# preparando o tutorial
+def Tutorial():
+    limpar_tela()
+    salvar_jogo()
+    typewriter(f"[Isa] {jogador_status['nome']}, antes de eu ir pro curso, preciso te ensinar a se defender pra quando você voltar pra casa.")
+    time.sleep(0.4)
+    typewriter("[Isa] Tá vendo aqueles bem-te-vi? Se você passar por eles, eles vão LUTAR com você. Eu sei, é meio estranho lutar com PÁSSAROS, mas é melhor prevenir do que remediar, né?")
+    typewriter("[Isa] Vamos lá, lutar com eles! Não se preocupe, se eu ver que você vai CAIR, eu paro a luta e nós voltamos depois!")
+    time.sleep(1)
+    print("Entrando na luta...")
+    time.sleep(1)
+    typewriter("[!] Rápido! Um bem-te-vi feroz se aproxima! O que você faz?")
+    typewriter(f"[Isa] {jogador_status['nome']}, sempre que você entrar em uma batalha, tente ANALISAR o inimigo, assim, você pode ver quanto de VIDA ele tem! Ah, e antes que eu me esqueça, você tem {jogador_status['vida']} de VIDA!")
+    print("Você analisou o inimigo.")
+    # status inimigo
+    time.sleep(2)
+    inimigo_tutorial_vida = 10
+    inimigo_tutorial_ataque = 10
+    # voltando pra luta
+    typewriter(f"[!] Bem-te-vi furioso! {inimigo_tutorial_vida} de VIDA. Apesar do tamanho pequeno, dá {inimigo_tutorial_ataque} de DANO!")
+    jogador_status['vida'] -= inimigo_tutorial_ataque
+    typewriter(f"[!] Bem-te-vi atacou {jogador_status['nome']}! Agora, {jogador_status['nome']} tem {jogador_status['vida']} de VIDA!")
+    if jogador_status['vida'] <= 0:
+        return "derrota"
+    typewriter(f"[Isa] Eita, eu esqueci de te avisar, mas ANALISAR um inimigo PULA seu TURNO, e vai pro TURNO DO INIMIGO. É bom saber quando usar! Tente atacar ele de volta!\nAh, e seu ataque padrão dá {jogador_status['ataque']} de dano, mas você pode pegar armas e aumentar seu dano também!")
+    inimigo_tutorial_vida -= jogador_status['ataque']
+    typewriter(f"[!] Você acertou o bem-te-vi em cheio! A vida do bem-te-vi é: {inimigo_tutorial_vida}")
+    # condicao de vitoria
+    if inimigo_tutorial_vida <= 0:
+        print(f"[Isa] Obaaa! {jogador_status['nome']}, você matou o bem-te-vi!")
+        print("[!] Indo para o próximo capítulo...")
+        time.sleep(2)
+        jogador_status["tutorial_concluido"] = True
+        jogador_status["capitulo"] = 2
+        salvar_jogo()
+        return capitulo2()
+        return "vitoria"
+    else:
+        return "derrota"
+    
 # escrevendo o capitulo 2 aqui!!
 def capitulo2():
+    global jogador_status
+    nome = jogador_status['nome']
     limpar_tela()
-    typewriter("Jardim de Cinzas.\nCapítulo 2: Culpa.")
-    typewriter(f"[Isa] Tchau {jogador_status['nome']}! Fica bem tá? Olha, como presente, vou te dar esse Baralho, tá bom?")
-    print("\n[+] Baralho foi adicionado ao Inventário, dentro do status do jogador. Você pode abrir o Inventário em Lutas ou no menu principal.") 
+    typewriter(f"[Isa] Tchau {jogador_status['nome']}! Fica bem tá? Olha, como presente, vou te dar essa Faca, tá bom?")
+    print("\n[+] Faca foi adicionado ao Inventário, dentro do status do jogador. Você pode abrir o Inventário em Lutas ou no menu principal.") 
     time.sleep(0.4)
-    jogador_status['inventário'].append("Baralho")
-    print("O baralho de cartas não serve só para jogar! ao invés de você lutar de mãos vazias, o baralho causa 13 de dano!")
+    jogador_status['inventario'].append("Faca de Carne")
+    print("[!] A Faca não serve apenas para cortar! ao invés de você lutar de mãos vazias, a faca causa 13 de dano!")
     time.sleep(0.4)
     input("Pressione qualquer coisa para mostrar o inventário...")
-    print(f"inventário: {jogador_status['inventário']}")
+    print(f"\ninventário: {','.join(jogador_status['inventario'])}\n")
     input("pressione qualquer coisa para sair do inventário...")
+    limpar_tela()
+    typewriter("[!] Jardim de Cinzas.")
+    time.sleep(0.7)
+    typewriter("Prólogo: O Pesadelo do Menino.")
+    time.sleep(0.7)
+    typewriter("Você acorda na sua cama, sem memórias de ter voltado pra casa.")
+    ler= input("No espelho ao lado, há um papel colado. Ler? [S/N]")
+    if ler.strip().upper() == "S":
+        limpar_tela()
+        typewriter("No papel, está escrito 'Ser humano', apenas.\nVocê encara o espelho. É você. Apesar de tudo, ainda é >>você<<.")
+        time.sleep(2)
+    typewriter("A casa está quieta, quase dando pra escutar sua respiração.")
+    typewriter("A porta do quarto range quase gritando um aviso de que você saiu. Todas as luzes estão apagadas.")
+    typewriter(f"[Isa?] OOOOOOOH {jogador_status['nome']}, abre aqui pra mim por favorzinho? Deixei meu chaveiro cair no esgoto, nojeira!")
+    typewriter("Você desce a escada com cuidado, segurando no corrimão. Manchas marrons e um cheiro metálico gruda na sua mão.")
+    typewriter("[Isa?] Finalmente! Abre logo aí, tô cansada!")
+    typewriter("Tudo está escuro. Você não consegue achar a chave. Droga...")
+    typewriter("Se apoiando em cantos vazios pra não cair, você vai até o olho de vidro pra pedir paciência.")
+    typewriter("De repente, uma sombra espreita de cima da escada, estranhamente familiar:")
+    typewriter(f"{jogador_status['nome']}, teve outro pesadelo de novo? Não abre a porta pra estranhos, você tá doente!")
+    typewriter("É a Isa. Realmente, é a Isa.", atraso=0.7)
+    typewriter(f"[???] {jogador_status['nome']}, não escuta ela! Abre a porta!")
+    typewriter(f"[Isa] Por tudo que é mais sagrado, NÃO ABRE, {jogador_status['nome']}!!!!")
+    typewriter("A coisa do outro lado da porta se acalmou.")
+    typewriter(f"[O que tá acontecendo?] {jogador_status['nome']}, abre pra sua irmãzinha, vai!!")
+    typewriter("[Isa] NÃO!")
+    typewriter("Você decide espiar pelo olho de vidro.")
+    limpar_tela()
+    typewriter("Você vê um vulto incessante se espalhando pelo quintal, como uma sombra.")
+    typewriter("Aquilo não é a Isa. Nunca foi.", atraso=0.6)
+    time.sleep(2)
+    typewriter("A voz levemente chiada, como uma gravação antiga.\nO horário atrasado.\nEla sabia que eu desconfiaria...")
+    typewriter("O que quer que seja, sabe como eu penso.")
+    typewriter("Há quanto tempo esse pesadelo está comigo? Por que COMIGO? Só eu vejo isto? O que vão achar de mim????!!!!")
+    time.sleep(0.7)
+    limpar_tela()
+    typewriter(f"... {jogador_status['nome']} caiu no chão, apavorado.")
+    time.sleep(0.5)
+    typewriter(f"[Isa] {jogador_status['nome']}, por favor! Não vai agora... Fala comigo! Eiii!!")
+    typewriter("Você acorda no quarto, completamente consciente do que aconteceu. Não foi só um sonho ruim.")
+    typewriter("[Isa] Ah, céus! Quer me fazer morta também? Você caiu tremendo em frente a porta, dizendo nada com nada! Já passou, já passou, você tá bem, tá? Está melhor que antes, pelo menos...")
+    typewriter("[Isa] eu vou pegar uma água com açúcar pra ver se você se acalma, tá?")
+    typewriter("[!] Enquanto o jogador estiver APAVORADO, ele NÃO causará DANO.")
+    capitulo3()
+
+# escrevendo o capitulo 3 aqui
+
+def capitulo3():
+    global jogador_status
+    jogador_status['capitulo'] = "3"
+    salvar_jogo()
+    typewriter("Jardim de Cinzas. Capítulo 1: Negação")
+
+# iniciar novo jogo
+
+def iniciar_novo_jogo():
+    global jogador_status
+    nome = input("Digite o nome da criança:")
     
+    while nome.strip() == "":
+        nome = input("Digite um nome válido:")
+        
+    jogador_status = criar_novo_jogo(nome)
+    salvar_jogo()
+        
+    Preludio()
 # Menu Inicial
 def menu_inicial():
-    while True:            
-        typewriter("Bem vindo ao meu jogo: Jardim de Cinzas.\n")
+    while True:
+        typewriter("Jardim de Cinzas.\n")
         time.sleep(1)
         print("-=--==-=--==-=--==-")
         print("MENU PRINCIPAL")
         print("-=--==-=--==-=--==-\n1 - Iniciar Jogo\n2 - Continuar Jogo\n3 - Créditos\n4 - Sair")
         time.sleep(1)
-        menu = input("Digite um dos números acima:").strip()
+        menu = input("Digite um dos números acima:\nApoie meu github -->>").strip()
         if menu == '1':
-            break
+            iniciar_novo_jogo()
         elif menu == '2':
-            carregar_jogo()
-            nome = jogador_status['nome']
-            if jogador_status['capitulo'] == 1:
-                Preludio()
-            elif jogador_status['capitulo'] == 2:
-                capitulo2()
-            break
+            if carregar_jogo():
+                if jogador_status['capitulo'] == 1:
+                    Preludio()
+                elif jogador_status['capitulo'] == 2:
+                    capitulo2()
+                else:
+                    input("pressione qualquer coisa para voltar ao menu...")
+                    limpar_tela()
         elif menu == '3':
-            typewriter("Jogo feito por NENSS (Não, Eu Não Sou um Studio)\nCréditos:\nRoteirista: Allan Duarte\nProgramador: Allan Duarte\n Eu, criador do jogo, dedico toda a parte de 'Agradecimentos Especiais' à minha família, que me apoiou desde a criação desse jogo. Sou eternamente grato à minha mãe, meu pai, e meu irmão mais novo.")
+            limpar_tela()
+            typewriter("Jardim de Cinzas feito por NENSS (Não, Eu Não Sou um Studio)\nCréditos:\nRoteirista: Allan Duarte\nProgramador: Allan Duarte\nCOLABORADORES: ehh, ninguém mas acho legal colocar isso aqui por enquanto...\nEu, criador do jogo, dedico toda a parte de 'Agradecimentos Especiais' à minha família, que me apoiou desde a criação desse jogo. Sou eternamente grato à minha mãe, meu pai, e meu irmão mais novo.")
             input("pressione qualquer coisa para voltar pro menu principal...")
             limpar_tela()
         elif menu == '4':
@@ -109,160 +266,5 @@ def menu_inicial():
             sys.exit()
         else:
             print("Erro: digite apenas os números listados!")
-# executar o menu    
+# aqui é onde toda a magia vai acontecer:
 menu_inicial()
-
-# perguntar o nome do jogador.
-while True:
-    nome = input("Digite o nome da criança.")
-    
-    if not nome.replace(" ", "").isalpha():
-        print("Erro. A criança deve ter um nome e/ou seu nome não pode ter números.")
-        continue
-    
-    if nome.upper() == "SUNNY":
-        print("Erro. A criança sente culpa demais pra jogar.")
-        time.sleep(1)
-        sys.exit()
-        
-    confirmacao = input(f"O nome da criança é {nome}. Pressione ENTER para confirmar ou Z para digitar outro.").upper()
-    if confirmacao == "":
-        break
-    elif confirmacao == "Z":
-        continue
-    else:
-        print("Erro. Pressione ENTER para confirmar o nome ou Z para escolher outro.")
-
-# sistema de luta
-jogador_status = {
-    "nome": nome,
-    "vida": 35,
-    "vida_max": 35,
-    "ataque": 10,
-    "inventário":[],
-    "capitulo": 1,
-    "tutorial_concluido": False
-}
-
-# save data em json (eu ODEIO json)
-def salvar_jogo():
-    with open("save.json", "w") as arquivo:
-        json.dump(jogador_status, arquivo, indent=4)
-    print("[+] Jogo salvo automaticamente.")
-
-# para os engraçadinhos que provavelmente vão mexer no código do status do jogador (vida padrão é 35, eu mexi de propósito)
-if jogador_status['vida'] > jogador_status['vida_max'] or jogador_status['vida_max'] > 35.1:
-        limpar_tela()
-        print("O jogador acorda com mais vida do que antes, repentinamente.")
-        input("O jogador quer testar seus novos poderes?[S/N]")
-        typewriter("O jogador não tem escolha.", atraso=0.5)
-        typewriter("O jogador se beliscou! menos 1 de vida!")
-        typewriter("não satisfeito, o jogador dá um soquinho no braço! menos 5 de vida!")
-        typewriter("nem doeu! O jogador... Bate a cabeça na parede...")
-        typewriter("MENOS 10 DE VIDA!! MAS O JOGADOR AINDA ESTÁ VIVO!")
-        typewriter("O jogador desce a escada de casa rolando!! menos 10 de vida!!")
-        typewriter("O jogador entra na cozinha.", atraso=0.5)
-        typewriter("O jogador vê um arsenal de possíveis machucados na prateleira!")
-        typewriter("O jogador encontrou uma faca.", atraso=0.5)
-        input("esfaquear?")
-        for c in range(1,1000):
-            print(f"o jogador recebe {c} de dano!")
-            time.sleep(0.005)
-        input("foi o suficiente?")
-        limpar_tela()
-        typewriter("...", atraso=1)
-        print("O jogador faleceu.")
-        print("O jogador percebeu que é tarde demais pra consertar seus erros.")
-        input("Se o jogador sabia das consequências de jogar desonestamente, por que ainda tentou ganhar vantagem?")
-        sys.exit()
-# preparando o tutorial
-def Tutorial():
-    limpar_tela()
-    salvar_jogo()
-    typewriter(f"[Isa] {nome}, antes de eu ir pro curso, preciso te ensinar a se defender pra quando você voltar pra casa.")
-    time.sleep(0.4)
-    typewriter("[Isa] Tá vendo aqueles bem-te-vi? Se você passar por eles, eles vão LUTAR com você. Eu sei, é meio estranho lutar com PÁSSAROS, mas é melhor prevenir do que remediar, né?")
-    typewriter("[Isa] Vamos lá, lutar com eles! Não se preocupe, se eu ver que você vai CAIR, eu paro a luta e nós voltamos depois!")
-    time.sleep(1)
-    print("Entrando na luta...")
-    time.sleep(1)
-    typewriter("[!] Rápido! Um bem-te-vi feroz se aproxima! O que você faz?")
-    typewriter(f"[Isa] {nome}, sempre que você entrar em uma batalha, tente ANALISAR o inimigo, assim, você pode ver quanto de VIDA ele tem! Ah, e antes que eu me esqueça, você tem {jogador_status['vida']} de VIDA!")
-    print("Você analisou o inimigo.")
-    # status inimigo
-    time.sleep(2)
-    inimigo_tutorial_vida = 10
-    inimigo_tutorial_ataque = 10
-    # voltando pra luta
-    typewriter(f"[!] Bem-te-vi furioso! {inimigo_tutorial_vida} de VIDA. Apesar do tamanho pequeno, dá {inimigo_tutorial_ataque} de DANO!")
-    jogador_status['vida'] -= inimigo_tutorial_ataque
-    typewriter(f"[!] Bem-te-vi atacou {nome}! Agora, {nome} tem {jogador_status['vida']} de VIDA!")
-    if jogador_status['vida'] <= 0:
-        return "derrota"
-    typewriter(f"[Isa] Eita, eu esqueci de te avisar, mas ANALISAR um inimigo PULA seu TURNO, e vai pro TURNO DO INIMIGO. É bom saber quando usar! Tente atacar ele de volta!\nAh, e seu ataque padrão dá {jogador_status['ataque']} de dano, mas você pode pegar armas e aumentar seu dano também!")
-    inimigo_tutorial_vida -= jogador_status['ataque']
-    typewriter(f"[!] Você acertou o bem-te-vi em cheio! A vida do bem-te-vi é: {inimigo_tutorial_vida}")
-    # condicao de vitoria
-    if inimigo_tutorial_vida <= 0:
-        print(f"[Isa] Obaaa! {nome}, você matou o bem-te-vi!")
-        jogador_status["tutorial_concluido"] = True
-        jogador_status["capitulo"] = 2
-        salvar_jogo()
-        return "vitoria"
-    else:
-        return "derrota"
-# primeira parte da história:
-limpar_tela()
-typewriter("Jardim de Cinzas.\nCapítulo 1: Tutorial.")
-typewriter(f"[???] {nome}, acorda!! você vai se atrasar pra escola!!!")
-typewriter("...")
-time.sleep(1)
-typewriter("Quem será que é agora?")
-time.sleep(1)
-typewriter("devagarzinho, você levanta as pálpebras e vê quem é...")
-print("É A SUA MÃE!!!")
-time.sleep(0.4)
-typewriter("[MÃE MUITO IRRITADA] TÁ ESPERANDO O QUÊ? LEVANTA DA CAMA E VAI SE ARRUMAR!")
-time.sleep(0.4)
-typewriter("Você olha o calendário escolar.")
-typewriter("Hoje é domingo.")
-time.sleep(0.4)
-typewriter("Antes que você pudesse dizer algo ou fechar a porta, alguém chega no corredor e interrompe sua mãe...")
-time.sleep(1)
-print("É sua irmã, Isa!")
-time.sleep(1)
-typewriter(f"[Isa] Mãe, hoje não tem aula, é DOMINGO, SETE HORAS DA MANHÃ!! Deixa o {nome} dormir e depois desce pra tomar café.")
-time.sleep(1)
-typewriter("[Isa] Na verdade, EU estou atrasada, pro curso musical que VOCÊ tinha que me levar, lembra?")
-time.sleep(2)
-print("Bate um silêncio ensurdecedor no quarto. Sua mãe procura as palavras, mas nada saiu da boca dela.")
-time.sleep(2)
-typewriter(f"[Mãe] Na verdade, por que não deixamos o {nome} decidir se ele quer dormir ou te levar, hein?")
-# interação do jogador
-
-def Preludio():
-    print("\nO que você quer?")
-    acao_jogador = input("\n[1] Dormir\n[2] Ir com a Isa")
-    if acao_jogador == "1":
-        typewriter(f"\n[Isa] Poxa, {nome}, vamos logo!")
-        time.sleep(1)
-        typewriter(f"[{nome}]...Tá.")
-        typewriter("Sem opções, você se arruma e sai de casa com ela.")
-        return Tutorial()
-    elif acao_jogador == "2":
-        typewriter("[Isa] Obaa, Vamos logo!")
-        return Tutorial()
-    else:
-        print("\n[!] Erro! Digite apenas um dos números listados!")
-        return "erro"
-while True:
-    resultado = Preludio()
-    
-    if resultado == "vitoria":
-        typewriter("[+] Você passou pro próximo capítulo...")
-        break
-    elif resultado == "derrota":
-        print("-=--=- VOCÊ CAIU! -=--=-")
-        game_over()
-    else:
-        pass
