@@ -23,8 +23,8 @@ Before we begin, I'd like to mention that English is not my native language. Ple
 
 ## How to install?
 ### Linux:  
-**download the repository as zip**
-**Extract it**
+**download the repository as zip**  
+**Extract it**  
 open the folder **"Jardim de Cinzas"**  
 **right click it**  
 **"open with terminal"**  
