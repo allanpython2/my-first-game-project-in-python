@@ -39,17 +39,19 @@ find **"Jardim_de_Cinzas.py"**
 ***Warning: Unfortunately, the game doesn't work on emulators like Pydroid3.***  
 
   ## Features:  
-  * Fixed several bugs
-  * Improved the player status system
-  * Added colored output to print()
-  * Isa no longer dies randomly
-
-      
+  * Fixed several bugs  
+  * Improved the player status system  
+  * Added colored output to print()  
+  * Isa no longer dies randomly  
+  * "Prologue: The Boy's Nightmare" has been released in Brazilian Portuguese.
+  * chapter 1 soon!  
+  
+  
 Author: Allan Oliveira Duarte Leal  
 Contact: eudeveloper143@gmail.com
-
+  
 # Meu primeiro projeto de jogo em Python
-
+  
 ## Nota para os Brasileiros ou portugueses:  
 Felizmente, **Jardim de Cinzas é um jogo 100% em PT-BR!!** Mas, como nem tudo são flores, o jogo ***não está 100% completo***: é recomendado esperar se você quiser a experiência completa!  
 Quem quiser dar **sugestões de melhorias**, finais diferentes ou **correções de bugs** *pode falar com esse cara lindo:* eudeveloper143@gmail.com  
@@ -85,8 +87,10 @@ encontre **"Jardim_de_Cinzas.py"**
 ***Aviso: Infelizmente, o jogo não roda em emuladores como Pydroid3.***  
 
   ## Atualizações:
-  * Consertei diversos bugs
-  * Melhorei o sistema de jogador_status
+  * Consertei diversos bugs;
+  * Melhorei o sistema de jogador_status;
+  * "Prólogo: O Pesadelo do Menino" foi lançado em portugês brasileiro!
+  * capítulo 1 em breve!
   * Agora a Isa não morre mais aleatoriamente.  
 
 Autor: Allan Oliveira Duarte Leal  
