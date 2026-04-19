@@ -5,7 +5,7 @@ import os
 import random
 import json
 from rich import print
-from engine import *
+from engine import mostrar_texto, escolher
 
 jogador_status = None
 
@@ -17,7 +17,8 @@ def criar_novo_jogo(nome):
         "ataque": 10,
         "inventario": [],
         "capitulo": 1,
-        "tutorial_concluido": False
+        "tutorial_concluido": False,
+        "sanidade": 0
     }
 
 # DIRETÓRIO JOGO
@@ -233,6 +234,18 @@ def iniciar_novo_jogo():
 # Menu Inicial
 def menu_inicial():
     while True:
+        mostrar_texto("[italic red]Este jogo não é recomendado para os de coração fraco.[/]")
+        time.sleep(2)
+        mostrar_texto("[italic red]Compreende?[/]")
+        opcao = escolher(["Sim", "Não"])
+        if opcao == 2:
+            mostrar_texto("[bold red]Lembre-se das consequências.[/]")
+            if jogador_status:
+                jogador_status['sanidade'] = 0
+                salvar_jogo()
+            limpar_tela()
+        else:
+            limpar_tela()
         mostrar_texto("Jardim de Cinzas.\n")
         time.sleep(1)
         print("-=--==-=--==-=--==-")
@@ -264,7 +277,7 @@ def menu_inicial():
                 mostrar_texto("Um jogo desenvolvido por: ")
                 print("[red]Liminal Studios[/red]")
                 time.sleep(1)
-                mostrar_texto("Jardim de Cinzas.\n\nCréditos:\n\nRoteirista: Allan Oliveira\n\nProgramador: Allan Duarte\n\nMúsica e Efeitos Sonoros: João Vitor Xavier\n\nEu, criador do jogo - Allan Duarte - dedico toda a parte de 'Agradecimentos Especiais' à minha família, que me apoiou desde a criação desse jogo. Sou eternamente grato à minha mãe, meu pai, e meu irmão mais novo.")
+                mostrar_texto("Jardim de Cinzas.\n\nCréditos:\n\nRoteirista: Allan Oliveira\n\nProgramador: Allan Oliveira\n\nMúsica e Efeitos Sonoros: João Vitor Xavier\n\nEu, criador do jogo - Allan Duarte - dedico toda a parte de 'Agradecimentos Especiais' à minha família, que me apoiou desde a criação desse jogo. Sou eternamente grato à minha mãe, meu pai, e meu irmão mais novo.")
                 input("pressione qualquer coisa para voltar pro menu principal...")
                 limpar_tela()
             case '4':
