@@ -18,7 +18,7 @@ def criar_novo_jogo(nome):
         "inventario": [],
         "capitulo": 1,
         "tutorial_concluido": False,
-        "sanidade": 0
+        "sanidade": 100
     }
 
 # DIRETÓRIO JOGO
@@ -168,10 +168,13 @@ def capitulo2():
     if opcao == 1:
         limpar_tela()
         mostrar_texto("No papel, está escrito 'Ser humano', apenas. Você encara o espelho.")
-        print("[bold yellow]É você. No fundo, saber que, apesar de tudo, ainda é você...[/]")
-        time.sleep(1)
-        print("[italic blue]te enche de esperança.[/]")
-        time.sleep(2)
+        if jogador_status['sanidade'] == 0:
+            mostrar_texto("[italic red]Somos nós.", atraso=0.8)
+            time.sleep(1.5)
+            limpar_tela()
+        else:
+            mostrar_texto("[bold yellow]É você. No fundo, saber que, apesar de tudo, ainda é você...[/]")
+            time.sleep(1)
     else:
         print("Você ignora.")
     mostrar_texto("A casa está quieta, quase dando pra escutar sua respiração.")
@@ -218,6 +221,7 @@ def capitulo3():
     jogador_status['capitulo'] = 3
     salvar_jogo()
     mostrar_texto("Jardim de Cinzas. Capítulo 1: Negação.\nEm breve!")
+    limpar_tela()
 
 # iniciar novo jogo
 
@@ -234,18 +238,23 @@ def iniciar_novo_jogo():
 # Menu Inicial
 def menu_inicial():
     while True:
-        mostrar_texto("[italic red]Este jogo não é recomendado para os de coração fraco.[/]")
-        time.sleep(2)
-        mostrar_texto("[italic red]Compreende?[/]")
-        opcao = escolher(["Sim", "Não"])
-        if opcao == 2:
-            mostrar_texto("[bold red]Lembre-se das consequências.[/]")
-            if jogador_status:
-                jogador_status['sanidade'] = 0
-                salvar_jogo()
-            limpar_tela()
-        else:
-            limpar_tela()
+        if jogador_status is not None:
+            if not jogador_status.get("aviso_visto", False):
+                mostrar_texto("[italic red]Este jogo não é recomendado para os de coração fraco.[/]")
+                time.sleep(2)
+                mostrar_texto("[italic red]Você compreende, não compreende?[/]")
+                opcao = escolher(["Sim", "Não"])
+                if opcao == 2:
+                    mostrar_texto("[bold red]Lembre-se das consequências.[/]")
+                    if jogador_status:
+                        jogador_status['sanidade'] = 0
+                        salvar_jogo()
+                        limpar_tela()
+                else:
+                    limpar_tela()
+                    jogador_status['aviso_visto'] = True
+                    salvar_jogo()
+        
         mostrar_texto("Jardim de Cinzas.\n")
         time.sleep(1)
         print("-=--==-=--==-=--==-")
